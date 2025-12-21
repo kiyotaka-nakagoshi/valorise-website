@@ -1273,7 +1273,7 @@ app.get('/', (c) => {
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
+    <section id="contact" class="py-20 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">
@@ -1283,54 +1283,19 @@ app.get('/', (c) => {
             </div>
             
             <div class="max-w-4xl mx-auto">
-                <div class="bg-white rounded-2xl p-8 md:p-12 shadow-lg" data-aos="fade-up">
-                    <form id="contactForm" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2" id="formNameLabel" data-ja="お名前" data-en="Name">お名前 <span class="text-red-500">*</span></label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" data-ja-placeholder="山田 太郎" data-en-placeholder="John Doe">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2" id="formEmailLabel" data-ja="メールアドレス" data-en="Email">メールアドレス <span class="text-red-500">*</span></label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" data-ja-placeholder="example@example.com" data-en-placeholder="example@example.com">
-                            </div>
-                        </div>
-                        
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2" id="formOrgLabel" data-ja="所属・団体名" data-en="Organization">所属・団体名</label>
-                                <input type="text" id="organization" name="organization" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" data-ja-placeholder="〇〇高校サッカー部" data-en-placeholder="ABC High School Soccer Team">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 font-semibold mb-2" id="formPhoneLabel" data-ja="電話番号" data-en="Phone">電話番号</label>
-                                <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" data-ja-placeholder="090-1234-5678" data-en-placeholder="+81-90-1234-5678">
-                            </div>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-gray-700 font-semibold mb-2" id="formTypeLabel" data-ja="お問い合わせ種類" data-en="Inquiry Type">お問い合わせ種類</label>
-                            <select id="type" name="type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600">
-                                <option value="individual" id="typeIndividual" data-ja="個人測定について" data-en="Individual Assessment">個人測定について</option>
-                                <option value="team" id="typeTeam" data-ja="チーム測定について" data-en="Team Assessment">チーム測定について</option>
-                                <option value="pricing" id="typePricing" data-ja="料金について" data-en="Pricing">料金について</option>
-                                <option value="other" id="typeOther" data-ja="その他" data-en="Other">その他</option>
-                            </select>
-                        </div>
-                        
-                        <div>
-                            <label class="block text-gray-700 font-semibold mb-2" id="formMessageLabel" data-ja="お問い合わせ内容" data-en="Message">お問い合わせ内容 <span class="text-red-500">*</span></label>
-                            <textarea id="message" name="message" required rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" data-ja-placeholder="ご質問やご要望をご記入ください" data-en-placeholder="Please enter your questions or requests"></textarea>
-                        </div>
-                        
-                        <div class="text-center">
-                            <button type="submit" class="btn-primary text-white px-12 py-4 rounded-full text-lg font-semibold inline-block">
-                                <i class="fas fa-paper-plane mr-2"></i>
-                                <span id="formSubmit" data-ja="送信する" data-en="Send Message">送信する</span>
-                            </button>
-                        </div>
-                        
-                        <div id="formMessage" class="hidden text-center p-4 rounded-lg"></div>
-                    </form>
+                <!-- Email Contact Card -->
+                <div class="bg-white rounded-2xl p-12 shadow-xl text-center" data-aos="fade-up">
+                    <div class="mb-8">
+                        <i class="fas fa-envelope text-6xl text-purple-600 mb-6"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4" id="contactEmailTitle" data-ja="メールでのお問い合わせ" data-en="Contact via Email">メールでのお問い合わせ</h3>
+                    <p class="text-gray-600 mb-8" id="contactEmailDesc" data-ja="下記のメールアドレスまでお気軽にお問い合わせください" data-en="Please feel free to contact us at the email address below">下記のメールアドレスまでお気軽にお問い合わせください</p>
+                    <a href="mailto:nakagoshi@loopz.co.jp" class="inline-block text-2xl md:text-3xl font-bold text-purple-600 hover:text-purple-800 transition-colors mb-8">
+                        <i class="fas fa-paper-plane mr-3"></i>nakagoshi@loopz.co.jp
+                    </a>
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <p class="text-sm text-gray-500" id="contactNote" data-ja="※ 通常1-2営業日以内にご返信いたします" data-en="* We will reply within 1-2 business days">※ 通常1-2営業日以内にご返信いたします</p>
+                    </div>
                 </div>
                 
                 <!-- Contact Info -->
@@ -1343,7 +1308,7 @@ app.get('/', (c) => {
                     <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
                         <i class="fas fa-envelope text-3xl text-purple-600 mb-3"></i>
                         <h3 class="font-bold mb-2" id="emailTitle" data-ja="メール" data-en="Email">メール</h3>
-                        <p class="text-gray-600 text-sm">nakagoshi@loopz.co.jp</p>
+                        <a href="mailto:nakagoshi@loopz.co.jp" class="text-purple-600 hover:text-purple-800 text-sm font-semibold">nakagoshi@loopz.co.jp</a>
                     </div>
                     <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
                         <i class="fas fa-building text-3xl text-purple-600 mb-3"></i>
