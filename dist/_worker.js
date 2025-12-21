@@ -654,9 +654,14 @@ var bt=Object.defineProperty;var Be=e=>{throw TypeError(e)};var vt=(e,t,a)=>t in
                 <!-- 4. Data Manager -->
                 <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-start space-x-6">
-                        <!-- Staff Photo Placeholder with Initials -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center">
-                            <span class="text-white text-4xl font-bold">TN</span>
+                        <!-- Staff Photo with Hover Effect -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                            <img src="/static/images/team/nemoto-color.jpg" 
+                                 alt="根本大洋 - Data Manager" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <img src="/static/images/team/nemoto-bw.jpg" 
+                                 alt="根本大洋 - Data Manager (B&W)" 
+                                 class="absolute inset-0 w-full h-full object-cover">
                             <div class="absolute bottom-0 right-0 bg-gradient-to-br from-green-700 to-emerald-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
                                 04
                             </div>
