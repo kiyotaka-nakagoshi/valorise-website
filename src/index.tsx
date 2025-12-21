@@ -162,6 +162,7 @@ app.get('/', (c) => {
                 <a href="#features" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="特徴" data-en="Features">特徴</a>
                 <a href="#services" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="測定項目" data-en="Services">測定項目</a>
                 <a href="#team" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="測定スタッフ" data-en="Team">測定スタッフ</a>
+                <a href="#gallery" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="測定の様子" data-en="Gallery">測定の様子</a>
                 <a href="#pricing" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="料金プラン" data-en="Pricing">料金プラン</a>
                 <a href="#contact" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
             </div>
@@ -176,6 +177,7 @@ app.get('/', (c) => {
             <a href="#features" class="block py-2 text-gray-800 hover:text-purple-600 mobile-nav-link" data-ja="特徴" data-en="Features">特徴</a>
             <a href="#services" class="block py-2 text-gray-800 hover:text-purple-600 mobile-nav-link" data-ja="測定項目" data-en="Services">測定項目</a>
             <a href="#team" class="block py-2 text-gray-800 hover:text-purple-600 mobile-nav-link" data-ja="測定スタッフ" data-en="Team">測定スタッフ</a>
+            <a href="#gallery" class="block py-2 text-gray-800 hover:text-purple-600 mobile-nav-link" data-ja="測定の様子" data-en="Gallery">測定の様子</a>
             <a href="#pricing" class="block py-2 text-gray-800 hover:text-purple-600 mobile-nav-link" data-ja="料金プラン" data-en="Pricing">料金プラン</a>
             <a href="#contact" class="block py-2 text-gray-800 hover:text-purple-600 mobile-nav-link" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
         </div>
@@ -894,6 +896,94 @@ app.get('/', (c) => {
                         <div class="text-4xl mb-2">📊</div>
                         <h4 class="font-bold mb-2" id="strength3Title" data-ja="質の高い分析" data-en="Quality">質の高い分析</h4>
                         <p class="text-sm text-gray-600" id="strength3Text" data-ja="データから実践への一貫したサポート" data-en="Comprehensive support from data to practice">データから実践への一貫したサポート</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    <span class="text-gradient" id="galleryTitle" data-ja="測定現場の様子" data-en="Measurement Gallery">測定現場の様子</span>
+                </h2>
+                <p class="text-xl text-gray-600" id="gallerySubtitle" data-ja="プロフェッショナルな測定環境と実際の測定風景" data-en="Professional measurement environment and actual scenes">プロフェッショナルな測定環境と実際の測定風景</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Gallery Item 1 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                    <img src="/static/images/gallery/measurement-01.jpg" 
+                         alt="ジャンプ測定の様子" 
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold" data-ja="ジャンプ測定" data-en="Jump Measurement">ジャンプ測定</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 2 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/static/images/gallery/measurement-02.jpg" 
+                         alt="パワー測定の様子" 
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold" data-ja="パワー測定" data-en="Power Measurement">パワー測定</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 3 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/static/images/gallery/measurement-03.jpg" 
+                         alt="チーム測定指導" 
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold" data-ja="チーム測定指導" data-en="Team Measurement">チーム測定指導</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 4 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up">
+                    <img src="/static/images/gallery/measurement-04.jpg" 
+                         alt="データ収集" 
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold" data-ja="データ収集" data-en="Data Collection">データ収集</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 5 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <img src="/static/images/gallery/measurement-05.jpg" 
+                         alt="スプリント測定環境" 
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold" data-ja="スプリント測定環境" data-en="Sprint Measurement">スプリント測定環境</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 6 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <img src="/static/images/gallery/measurement-06.jpg" 
+                         alt="室内トレーニング施設" 
+                         class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <p class="text-white font-semibold" data-ja="室内トレーニング施設" data-en="Indoor Facility">室内トレーニング施設</p>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+                <div class="relative group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 md:col-span-2 lg:col-span-3" data-aos="fade-up">
+                    <img src="/static/images/gallery/measurement-07.jpg" 
+                         alt="野球チーム測定" 
+                         class="w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                        <div>
+                            <p class="text-white font-semibold text-xl mb-2" data-ja="野球チーム測定" data-en="Baseball Team Measurement">野球チーム測定</p>
+                            <p class="text-gray-200 text-sm" data-ja="プロフェッショナルな測定環境でチーム全体をサポート" data-en="Supporting entire teams in professional measurement environment">プロフェッショナルな測定環境でチーム全体をサポート</p>
+                        </div>
                     </div>
                 </div>
             </div>
