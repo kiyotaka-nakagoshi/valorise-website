@@ -577,9 +577,14 @@ app.get('/', (c) => {
                 <!-- 1. Director -->
                 <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up">
                     <div class="flex items-start space-x-6">
-                        <!-- Staff Photo Placeholder with Initials -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
-                            <span class="text-white text-4xl font-bold">KN</span>
+                        <!-- Staff Photo with Hover Effect (Business → Gym) -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                            <img src="/static/images/team/nakagoshi-business.jpg" 
+                                 alt="中越清登 - Director (Business)" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <img src="/static/images/team/nakagoshi-gym.jpg" 
+                                 alt="中越清登 - Director (Gym)" 
+                                 class="absolute inset-0 w-full h-full object-cover">
                             <div class="absolute bottom-0 right-0 bg-gradient-to-br from-purple-700 to-indigo-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
                                 01
                             </div>
