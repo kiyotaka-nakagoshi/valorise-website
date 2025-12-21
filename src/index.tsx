@@ -732,14 +732,21 @@ app.get('/', (c) => {
                 <!-- 5 & 6. Field Operators -->
                 <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-start space-x-6">
-                        <!-- Staff Photos Placeholder with Initials (2 operators) -->
+                        <!-- Staff Photos (2 operators) -->
                         <div class="flex flex-col space-y-2 flex-shrink-0">
-                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center">
-                                <span class="text-white text-4xl font-bold">TU</span>
+                            <!-- Taiyo Urishima (05) - With hover effect -->
+                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group">
+                                <img src="/static/images/team/urishima-color.jpg" 
+                                     alt="瓜島大洋 - Field Operator" 
+                                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                                <img src="/static/images/team/urishima-bw.jpg" 
+                                     alt="瓜島大洋 - Field Operator (B&W)" 
+                                     class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-700 to-pink-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
                                     05
                                 </div>
                             </div>
+                            <!-- Hayate Fujimori (06) - Placeholder -->
                             <div class="relative w-32 h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-red-500 to-pink-500 flex items-center justify-center">
                                 <span class="text-white text-4xl font-bold">HF</span>
                                 <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-600 to-pink-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
