@@ -577,8 +577,12 @@ app.get('/', (c) => {
                 <!-- 1. Director -->
                 <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-gradient-to-br from-purple-600 to-indigo-600 text-white w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 text-2xl font-bold">
-                            01
+                        <!-- Staff Photo Placeholder with Initials -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
+                            <span class="text-white text-4xl font-bold">KN</span>
+                            <div class="absolute bottom-0 right-0 bg-gradient-to-br from-purple-700 to-indigo-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                01
+                            </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
@@ -612,8 +616,12 @@ app.get('/', (c) => {
                 <!-- 2. Special Advisor -->
                 <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-gradient-to-br from-yellow-500 to-orange-500 text-white w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 text-2xl font-bold">
-                            02
+                        <!-- Staff Photo Placeholder with Initials -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center">
+                            <span class="text-white text-4xl font-bold">NS</span>
+                            <div class="absolute bottom-0 right-0 bg-gradient-to-br from-yellow-600 to-orange-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                02
+                            </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
@@ -645,13 +653,22 @@ app.get('/', (c) => {
                 <!-- 3. Technical Lead -->
                 <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-gradient-to-br from-blue-600 to-cyan-600 text-white w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 text-2xl font-bold">
-                            03
+                        <!-- Staff Photo with Hover Effect -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                            <img src="/static/images/team/kitahara-color.jpg" 
+                                 alt="北原寛也 - Technical Lead" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <img src="/static/images/team/kitahara-bw.jpg" 
+                                 alt="北原寛也 - Technical Lead (B&W)" 
+                                 class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute bottom-0 right-0 bg-gradient-to-br from-blue-600 to-cyan-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                03
+                            </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
                                 <span id="team3Role" data-ja="テクニカルリード" data-en="Technical Lead">テクニカルリード</span>
-                                <span class="text-blue-600 ml-2" id="team3Name" data-ja="（北原寛也）" data-en="(Kanya Kitahara)">(北原寛也)</span>
+                                <span class="text-blue-600 ml-2" id="team3Name" data-ja="（北原寛也）" data-en="(Hiroya Kitahara)">(北原寛也)</span>
                             </h3>
                             <div class="mb-4">
                                 <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team3Badge1" data-ja="技術責任" data-en="Technical Lead">技術責任</span>
@@ -678,8 +695,12 @@ app.get('/', (c) => {
                 <!-- 4. Data Manager -->
                 <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-gradient-to-br from-green-600 to-emerald-600 text-white w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 text-2xl font-bold">
-                            04
+                        <!-- Staff Photo Placeholder with Initials -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center">
+                            <span class="text-white text-4xl font-bold">TN</span>
+                            <div class="absolute bottom-0 right-0 bg-gradient-to-br from-green-700 to-emerald-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                04
+                            </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
@@ -711,8 +732,20 @@ app.get('/', (c) => {
                 <!-- 5 & 6. Field Operators -->
                 <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-start space-x-6">
-                        <div class="bg-gradient-to-br from-red-600 to-pink-600 text-white w-20 h-20 rounded-full flex items-center justify-center flex-shrink-0 text-2xl font-bold">
-                            05<br>06
+                        <!-- Staff Photos Placeholder with Initials (2 operators) -->
+                        <div class="flex flex-col space-y-2 flex-shrink-0">
+                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-red-600 to-pink-600 flex items-center justify-center">
+                                <span class="text-white text-4xl font-bold">TU</span>
+                                <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-700 to-pink-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                    05
+                                </div>
+                            </div>
+                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-red-500 to-pink-500 flex items-center justify-center">
+                                <span class="text-white text-4xl font-bold">HF</span>
+                                <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-600 to-pink-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                    06
+                                </div>
+                            </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
