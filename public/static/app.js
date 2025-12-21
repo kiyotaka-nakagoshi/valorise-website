@@ -144,65 +144,68 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        organization: document.getElementById('organization').value,
-        phone: document.getElementById('phone').value,
-        type: document.getElementById('type').value,
-        message: document.getElementById('message').value,
-        language: currentLang
-    };
-    
-    const submitButton = e.target.querySelector('button[type="submit"]');
-    const formMessage = document.getElementById('formMessage');
-    
-    // Disable submit button
-    submitButton.disabled = true;
-    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>' + 
-        (currentLang === 'ja' ? '送信中...' : 'Sending...');
-    
-    try {
-        const response = await axios.post('/api/contact', formData);
+// Contact Form Submission (if form exists)
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
         
-        if (response.data.success) {
-            formMessage.className = 'text-center p-4 rounded-lg bg-green-100 text-green-800';
-            formMessage.textContent = response.data.message;
-            formMessage.classList.remove('hidden');
+        const formData = {
+            name: document.getElementById('name').value,
+            email: document.getElementById('email').value,
+            organization: document.getElementById('organization').value,
+            phone: document.getElementById('phone').value,
+            type: document.getElementById('type').value,
+            message: document.getElementById('message').value,
+            language: currentLang
+        };
+        
+        const submitButton = e.target.querySelector('button[type="submit"]');
+        const formMessage = document.getElementById('formMessage');
+        
+        // Disable submit button
+        submitButton.disabled = true;
+        submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>' + 
+            (currentLang === 'ja' ? '送信中...' : 'Sending...');
+        
+        try {
+            const response = await axios.post('/api/contact', formData);
             
-            // Reset form
-            document.getElementById('contactForm').reset();
+            if (response.data.success) {
+                formMessage.className = 'text-center p-4 rounded-lg bg-green-100 text-green-800';
+                formMessage.textContent = response.data.message;
+                formMessage.classList.remove('hidden');
+                
+                // Reset form
+                document.getElementById('contactForm').reset();
+                
+                // Hide message after 5 seconds
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            } else {
+                throw new Error(response.data.error);
+            }
+        } catch (error) {
+            console.error('Contact form error:', error);
+            formMessage.className = 'text-center p-4 rounded-lg bg-red-100 text-red-800';
+            formMessage.textContent = currentLang === 'ja' 
+                ? 'エラーが発生しました。もう一度お試しください。' 
+                : 'An error occurred. Please try again.';
+            formMessage.classList.remove('hidden');
             
             // Hide message after 5 seconds
             setTimeout(() => {
                 formMessage.classList.add('hidden');
             }, 5000);
-        } else {
-            throw new Error(response.data.error);
+        } finally {
+            // Re-enable submit button
+            submitButton.disabled = false;
+            submitButton.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>' + 
+                (currentLang === 'ja' ? '送信する' : 'Send Message');
         }
-    } catch (error) {
-        console.error('Contact form error:', error);
-        formMessage.className = 'text-center p-4 rounded-lg bg-red-100 text-red-800';
-        formMessage.textContent = currentLang === 'ja' 
-            ? 'エラーが発生しました。もう一度お試しください。' 
-            : 'An error occurred. Please try again.';
-        formMessage.classList.remove('hidden');
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.classList.add('hidden');
-        }, 5000);
-    } finally {
-        // Re-enable submit button
-        submitButton.disabled = false;
-        submitButton.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>' + 
-            (currentLang === 'ja' ? '送信する' : 'Send Message');
-    }
-});
+    });
+}
 
 // Add gradient white class for initial state
 const style = document.createElement('style');
