@@ -158,7 +158,26 @@ curl http://localhost:3000
 # setup_cloudflare_api_key ツールを使用してAPI設定
 ```
 
-#### 2. プロジェクト作成（初回のみ）
+#### 2. メール送信機能の設定（オプション）
+
+お問い合わせフォームからメール送信を有効にするには：
+
+```bash
+# Resendアカウントの作成
+# 1. https://resend.com にアクセス
+# 2. アカウント作成とAPIキー取得
+
+# 環境変数の設定（本番環境）
+wrangler secret put RESEND_API_KEY
+# プロンプトでAPIキーを入力
+
+# ローカル開発環境用（.dev.vars ファイルを作成）
+echo "RESEND_API_KEY=your_api_key_here" > .dev.vars
+```
+
+**注意**: メール送信機能が設定されていない場合でも、フォームは正常に動作し、コンソールログに内容が記録されます。
+
+#### 3. プロジェクト作成（初回のみ）
 
 ```bash
 # プロジェクト作成
@@ -167,14 +186,14 @@ npx wrangler pages project create webapp \
   --compatibility-date 2024-01-01
 ```
 
-#### 3. デプロイ実行
+#### 4. デプロイ実行
 
 ```bash
 # ビルドとデプロイ
 npm run deploy:prod
 ```
 
-#### 4. デプロイ後のURL
+#### 5. デプロイ後のURL
 
 - 本番: `https://webapp.pages.dev`
 - ブランチ: `https://main.webapp.pages.dev`

@@ -2,7 +2,11 @@ import { Hono } from 'hono'
 import { cors } from 'hono/cors'
 import { serveStatic } from 'hono/cloudflare-workers'
 
-const app = new Hono()
+type Bindings = {
+  RESEND_API_KEY?: string
+}
+
+const app = new Hono<{ Bindings: Bindings }>()
 
 // Enable CORS for API routes
 app.use('/api/*', cors())
@@ -10,7 +14,7 @@ app.use('/api/*', cors())
 // Serve static files from public directory
 app.use('/static/*', serveStatic({ root: './public' }))
 
-// API route for contact form (placeholder)
+// API route for contact form with email sending
 app.post('/api/contact', async (c) => {
   try {
     const body = await c.req.json()
@@ -21,9 +25,85 @@ app.post('/api/contact', async (c) => {
       return c.json({ success: false, error: 'Required fields are missing' }, 400)
     }
 
-    // TODO: Implement email sending or store in database
-    // For now, just log and return success
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      return c.json({ success: false, error: 'Invalid email format' }, 400)
+    }
+
+    // Log the submission
     console.log('Contact form submission:', { name, email, organization, phone, message, type, language })
+
+    // Format email content
+    const emailSubject = language === 'ja' 
+      ? `【VALORISE】新規お問い合わせ - ${name}様`
+      : `[VALORISE] New Inquiry - ${name}`
+    
+    const emailBody = `
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+VALORISE フィジカル測定サービス
+新規お問い合わせ
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+【お名前】
+${name}
+
+【メールアドレス】
+${email}
+
+【組織名】
+${organization || '未記入'}
+
+【電話番号】
+${phone || '未記入'}
+
+【お問い合わせ種別】
+${type === 'team' ? 'チーム測定' : type === 'individual' ? '個人測定' : type === 'consultation' ? '相談・見積もり' : 'その他'}
+
+【お問い合わせ内容】
+${message}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+送信日時: ${new Date().toLocaleString('ja-JP', { timeZone: 'Asia/Tokyo' })}
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+`
+
+    // Send email using Resend API (requires RESEND_API_KEY in environment)
+    // To set up: wrangler secret put RESEND_API_KEY
+    const resendApiKey = c.env?.RESEND_API_KEY
+    
+    if (resendApiKey) {
+      try {
+        const resendResponse = await fetch('https://api.resend.com/emails', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${resendApiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            from: 'VALORISE Contact Form <onboarding@resend.dev>',
+            to: ['nakagoshi@loopz.co.jp'],
+            reply_to: email,
+            subject: emailSubject,
+            text: emailBody
+          })
+        })
+
+        if (!resendResponse.ok) {
+          console.error('Resend API error:', await resendResponse.text())
+        } else {
+          console.log('Email sent successfully via Resend')
+        }
+      } catch (emailError) {
+        console.error('Failed to send email:', emailError)
+      }
+    } else {
+      console.warn('RESEND_API_KEY not configured. Email not sent.')
+      console.log('To enable email sending:')
+      console.log('1. Sign up at https://resend.com')
+      console.log('2. Get your API key')
+      console.log('3. Run: wrangler secret put RESEND_API_KEY')
+    }
 
     return c.json({ 
       success: true, 
@@ -127,6 +207,15 @@ app.get('/', (c) => {
             top: 20px;
             right: 20px;
             z-index: 1000;
+        }
+        
+        /* Mobile: Move language toggle to left side to avoid menu button */
+        @media (max-width: 768px) {
+            .lang-toggle {
+                top: 20px;
+                left: 20px;
+                right: auto;
+            }
         }
         
         /* Navigation */
