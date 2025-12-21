@@ -746,9 +746,14 @@ app.get('/', (c) => {
                                     05
                                 </div>
                             </div>
-                            <!-- Hayate Fujimori (06) - Placeholder -->
-                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden bg-gradient-to-br from-red-500 to-pink-500 flex items-center justify-center">
-                                <span class="text-white text-4xl font-bold">HF</span>
+                            <!-- Hayate Fujimori (06) - With hover effect -->
+                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group">
+                                <img src="/static/images/team/fujimori-color.jpg" 
+                                     alt="藤森颯 - Field Operator" 
+                                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                                <img src="/static/images/team/fujimori-bw.jpg" 
+                                     alt="藤森颯 - Field Operator (B&W)" 
+                                     class="absolute inset-0 w-full h-full object-cover">
                                 <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-600 to-pink-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
                                     06
                                 </div>
