@@ -139,6 +139,23 @@ app.get('/', (c) => {
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+        
+        /* Auto-switching staff photos */
+        .staff-photo-container {
+            position: relative;
+        }
+        
+        .staff-photo-container img {
+            transition: opacity 1s ease-in-out;
+        }
+        
+        .staff-photo-container img.photo-hidden {
+            opacity: 0;
+        }
+        
+        .staff-photo-container img.photo-visible {
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="smooth-scroll">
@@ -580,7 +597,7 @@ app.get('/', (c) => {
                 <div class="bg-gradient-to-br from-purple-50 to-indigo-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up">
                     <div class="flex items-start space-x-6">
                         <!-- Staff Photo with Hover Effect (Business → Gym) -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
                             <img src="/static/images/team/nakagoshi-business.jpg" 
                                  alt="中越清登 - Director (Business)" 
                                  class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
@@ -624,7 +641,7 @@ app.get('/', (c) => {
                 <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start space-x-6">
                         <!-- Staff Photo with Hover Effect (Business → TV) -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
                             <img src="/static/images/team/shibamura-business.jpg" 
                                  alt="柴村直弥 - Special Advisor (Business)" 
                                  class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
@@ -666,7 +683,7 @@ app.get('/', (c) => {
                 <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-start space-x-6">
                         <!-- Staff Photo with Hover Effect -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
                             <img src="/static/images/team/kitahara-color.jpg" 
                                  alt="北原寛也 - Technical Lead" 
                                  class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
@@ -708,7 +725,7 @@ app.get('/', (c) => {
                 <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-start space-x-6">
                         <!-- Staff Photo with Hover Effect -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
                             <img src="/static/images/team/nemoto-color.jpg" 
                                  alt="根本大洋 - Data Manager" 
                                  class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
@@ -752,7 +769,7 @@ app.get('/', (c) => {
                         <!-- Staff Photos (2 operators) -->
                         <div class="flex flex-col space-y-2 flex-shrink-0">
                             <!-- Taiyo Urishima (05) - With hover effect -->
-                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group">
+                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group staff-photo-container">
                                 <img src="/static/images/team/urishima-color.jpg" 
                                      alt="瓜島大洋 - Field Operator" 
                                      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
@@ -764,7 +781,7 @@ app.get('/', (c) => {
                                 </div>
                             </div>
                             <!-- Hayate Fujimori (06) - With hover effect -->
-                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group">
+                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group staff-photo-container">
                                 <img src="/static/images/team/fujimori-color.jpg" 
                                      alt="藤森颯 - Field Operator" 
                                      class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">

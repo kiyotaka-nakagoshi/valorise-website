@@ -261,3 +261,42 @@ window.addEventListener('scroll', () => {
 
 console.log('VALORISE Website Initialized');
 console.log('Current Language:', currentLang);
+
+// Auto-switch staff photos every 2 seconds
+function initStaffPhotoAutoSwitch() {
+    const staffPhotoContainers = document.querySelectorAll('.staff-photo-container');
+    
+    staffPhotoContainers.forEach(container => {
+        const images = container.querySelectorAll('img');
+        if (images.length !== 2) return; // Need exactly 2 images
+        
+        let currentIndex = 0;
+        
+        // Set initial state
+        images[0].classList.add('photo-visible');
+        images[1].classList.add('photo-hidden');
+        
+        // Switch photos every 2 seconds
+        setInterval(() => {
+            if (currentIndex === 0) {
+                images[0].classList.remove('photo-visible');
+                images[0].classList.add('photo-hidden');
+                images[1].classList.remove('photo-hidden');
+                images[1].classList.add('photo-visible');
+                currentIndex = 1;
+            } else {
+                images[1].classList.remove('photo-visible');
+                images[1].classList.add('photo-hidden');
+                images[0].classList.remove('photo-hidden');
+                images[0].classList.add('photo-visible');
+                currentIndex = 0;
+            }
+        }, 2000); // Switch every 2 seconds
+    });
+}
+
+// Initialize staff photo auto-switch after page load
+window.addEventListener('load', () => {
+    initStaffPhotoAutoSwitch();
+    console.log('Staff photo auto-switch initialized');
+});
