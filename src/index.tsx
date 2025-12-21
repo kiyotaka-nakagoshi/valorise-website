@@ -621,9 +621,14 @@ app.get('/', (c) => {
                 <!-- 2. Special Advisor -->
                 <div class="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-start space-x-6">
-                        <!-- Staff Photo Placeholder with Initials -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-yellow-500 to-orange-500 flex items-center justify-center">
-                            <span class="text-white text-4xl font-bold">NS</span>
+                        <!-- Staff Photo with Hover Effect (Business → TV) -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group">
+                            <img src="/static/images/team/shibamura-business.jpg" 
+                                 alt="柴村直弥 - Special Advisor (Business)" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <img src="/static/images/team/shibamura-tv.jpg" 
+                                 alt="柴村直弥 - Special Advisor (TV)" 
+                                 class="absolute inset-0 w-full h-full object-cover">
                             <div class="absolute bottom-0 right-0 bg-gradient-to-br from-yellow-600 to-orange-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
                                 02
                             </div>
