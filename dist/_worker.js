@@ -1205,18 +1205,23 @@ ${c}
                 </div>
                 
                 <!-- Contact Info -->
-                <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
                     <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up">
-                        <i class="fas fa-map-marker-alt text-3xl text-purple-600 mb-3"></i>
-                        <h3 class="font-bold mb-2" id="addressTitle" data-ja="所在地" data-en="Address">所在地</h3>
-                        <p class="text-gray-600 text-sm">東京都調布市上石原2−40−6 B1F</p>
+                        <i class="fas fa-phone text-3xl text-purple-600 mb-3"></i>
+                        <h3 class="font-bold mb-2" id="phoneTitle" data-ja="電話番号" data-en="Phone">電話番号</h3>
+                        <a href="tel:08054646367" class="text-purple-600 hover:text-purple-800 text-sm font-semibold">080-5464-6367</a>
                     </div>
-                    <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="50">
                         <i class="fas fa-envelope text-3xl text-purple-600 mb-3"></i>
                         <h3 class="font-bold mb-2" id="emailTitle" data-ja="メール" data-en="Email">メール</h3>
                         <a href="mailto:nakagoshi@loopz.co.jp" class="text-purple-600 hover:text-purple-800 text-sm font-semibold">nakagoshi@loopz.co.jp</a>
                     </div>
-                    <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-map-marker-alt text-3xl text-purple-600 mb-3"></i>
+                        <h3 class="font-bold mb-2" id="addressTitle" data-ja="所在地" data-en="Address">所在地</h3>
+                        <p class="text-gray-600 text-sm">東京都調布市上石原2−40−6 B1F</p>
+                    </div>
+                    <div class="bg-white rounded-xl p-6 shadow-md text-center" data-aos="fade-up" data-aos-delay="150">
                         <i class="fas fa-building text-3xl text-purple-600 mb-3"></i>
                         <h3 class="font-bold mb-2" id="companyTitle" data-ja="運営会社" data-en="Company">運営会社</h3>
                         <p class="text-gray-600 text-sm">株式会社LOOPZ</p>
@@ -1256,8 +1261,9 @@ ${c}
                 <div>
                     <h4 class="font-bold mb-4" id="footerContact" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</h4>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li><i class="fas fa-map-marker-alt mr-2"></i>東京都調布市上石原2−40−6 B1F</li>
+                        <li><i class="fas fa-phone mr-2"></i>080-5464-6367</li>
                         <li><i class="fas fa-envelope mr-2"></i>nakagoshi@loopz.co.jp</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>東京都調布市上石原2−40−6 B1F</li>
                     </ul>
                 </div>
             </div>
