@@ -1113,30 +1113,44 @@ app.get('/', (c) => {
                         <h3 class="text-2xl font-bold mb-2" id="plan1Title" data-ja="VALORISE Entry" data-en="VALORISE Entry">VALORISE Entry</h3>
                         <p class="text-gray-600 text-sm mb-4" id="plan1Subtitle" data-ja="お試しプラン" data-en="Trial Plan">お試しプラン</p>
                         <div class="text-4xl font-bold text-purple-600">
-                            ¥110,000
+                            ¥165,000
                         </div>
                         <p class="text-sm text-gray-500 mt-2" id="plan1Tax" data-ja="（税込）" data-en="(Tax Included)">(税込)</p>
+                        <p class="text-xs text-gray-500 mt-1" id="plan1Capacity" data-ja="20名まで" data-en="Up to 20 people">20名まで</p>
+                        <p class="text-xs text-gray-500" id="plan1Extra" data-ja="追加1名：+¥5,000" data-en="+¥5,000 per additional person">追加1名：+¥5,000</p>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                            <span class="text-sm" id="plan1Feature1" data-ja="基本測定（10m/30m、CMJ）" data-en="Basic measurements">基本測定（10m/30m、CMJ）</span>
+                            <span class="text-sm" id="plan1Feature1" data-ja="10m/30m、CMJ（両脚）" data-en="10m/30m, CMJ (both legs)">10m/30m、CMJ（両脚）</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                            <span class="text-sm" id="plan1Feature2" data-ja="数値提示のみ" data-en="Data only">数値提示のみ</span>
+                            <span class="text-sm" id="plan1Feature2" data-ja="RB（両脚）" data-en="RB (both legs)">RB（両脚）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm" id="plan1Feature3" data-ja="片脚CMJ（左右差）" data-en="Single-leg CMJ (L/R diff)">片脚CMJ（左右差）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm" id="plan1Feature4" data-ja="RDL30（平均速度のみ）" data-en="RDL30 (avg speed only)">RDL30（平均速度のみ）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm" id="plan1Feature5" data-ja="数値提示のみ" data-en="Data only">数値提示のみ</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-times text-gray-300 mr-2 mt-1"></i>
-                            <span class="text-sm text-gray-400" id="plan1Feature3" data-ja="個別評価なし" data-en="No individual assessment">個別評価なし</span>
+                            <span class="text-sm text-gray-400" id="plan1Feature6" data-ja="個別評価なし" data-en="No individual assessment">個別評価なし</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-times text-gray-300 mr-2 mt-1"></i>
-                            <span class="text-sm text-gray-400" id="plan1Feature4" data-ja="トレーニングプログラムなし" data-en="No training program">トレーニングプログラムなし</span>
+                            <span class="text-sm text-gray-400" id="plan1Feature7" data-ja="トレーニングプログラムなし" data-en="No training program">トレーニングプログラムなし</span>
                         </li>
                     </ul>
                     <a href="#contact" class="block w-full bg-gray-200 text-gray-800 text-center py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors">
-                        <span id="plan1CTA" data-ja="詳細を見る" data-en="Learn More">詳細を見る</span>
+                        <span id="plan1CTA" data-ja="お問い合わせ" data-en="Contact Us">お問い合わせ</span>
                     </a>
                 </div>
                 
@@ -1146,26 +1160,40 @@ app.get('/', (c) => {
                         <h3 class="text-2xl font-bold mb-2" id="plan2Title" data-ja="VALORISE Core" data-en="VALORISE Core">VALORISE Core</h3>
                         <p class="text-gray-600 text-sm mb-4" id="plan2Subtitle" data-ja="スタンダードプラン" data-en="Standard Plan">スタンダードプラン</p>
                         <div class="text-4xl font-bold text-purple-600">
-                            ¥198,000
+                            ¥250,000
                         </div>
                         <p class="text-sm text-gray-500 mt-2" id="plan2Tax" data-ja="（税込）" data-en="(Tax Included)">(税込)</p>
+                        <p class="text-xs text-gray-500 mt-1" id="plan2Capacity" data-ja="25名まで" data-en="Up to 25 people">25名まで</p>
+                        <p class="text-xs text-gray-500" id="plan2Extra" data-ja="追加1名：+¥5,500" data-en="+¥5,500 per additional person">追加1名：+¥5,500</p>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                            <span class="text-sm" id="plan2Feature1" data-ja="スプリント・ジャンプ・RB・RDL30" data-en="Sprint, Jump, RB, RDL30">スプリント・ジャンプ・RB・RDL30</span>
+                            <span class="text-sm" id="plan2Feature1" data-ja="スプリント（10m/30m）" data-en="Sprint (10m/30m)">スプリント（10m/30m）</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
-                            <span class="text-sm" id="plan2Feature2" data-ja="チームレポート提供" data-en="Team report">チームレポート提供</span>
+                            <span class="text-sm" id="plan2Feature2" data-ja="CMJ・片脚CMJ" data-en="CMJ, Single-leg CMJ">CMJ・片脚CMJ</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm" id="plan2Feature3" data-ja="RB（両脚・片脚）" data-en="RB (both legs, single leg)">RB（両脚・片脚）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm" id="plan2Feature4" data-ja="RDL30（左右）" data-en="RDL30 (L/R)">RDL30（左右）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm" id="plan2Feature5" data-ja="PushPress（両脚）" data-en="PushPress (both legs)">PushPress（両脚）</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span class="text-sm" id="plan2Feature6" data-ja="チームレポート提供" data-en="Team report">チームレポート提供</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-times text-gray-300 mr-2 mt-1"></i>
-                            <span class="text-sm text-gray-400" id="plan2Feature3" data-ja="個人レポートなし" data-en="No individual report">個人レポートなし</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-times text-gray-300 mr-2 mt-1"></i>
-                            <span class="text-sm text-gray-400" id="plan2Feature4" data-ja="トレーニングプログラムなし" data-en="No training program">トレーニングプログラムなし</span>
+                            <span class="text-sm text-gray-400" id="plan2Feature7" data-ja="個人レポートなし" data-en="No individual report">個人レポートなし</span>
                         </li>
                     </ul>
                     <a href="#contact" class="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
@@ -1185,6 +1213,8 @@ app.get('/', (c) => {
                             ¥440,000
                         </div>
                         <p class="text-sm text-purple-200 mt-2" id="plan3Tax" data-ja="（税込）" data-en="(Tax Included)">(税込)</p>
+                        <p class="text-xs text-purple-200 mt-1" id="plan3Capacity" data-ja="30名まで" data-en="Up to 30 people">30名まで</p>
+                        <p class="text-xs text-purple-200" id="plan3Extra" data-ja="追加1名：+¥8,800" data-en="+¥8,800 per additional person">追加1名：+¥8,800</p>
                     </div>
                     <ul class="space-y-3 mb-8 text-white">
                         <li class="flex items-start">
@@ -1218,6 +1248,8 @@ app.get('/', (c) => {
                             ¥660,000<span class="text-xl">〜</span>
                         </div>
                         <p class="text-sm text-gray-500 mt-2" id="plan4Tax" data-ja="（税込）" data-en="(Tax Included)">(税込)</p>
+                        <p class="text-xs text-gray-500 mt-1" id="plan4Capacity" data-ja="25名まで" data-en="Up to 25 people">25名まで</p>
+                        <p class="text-xs text-gray-500" id="plan4Extra" data-ja="追加1名：+¥20,000" data-en="+¥20,000 per additional person">追加1名：+¥20,000</p>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-start">
