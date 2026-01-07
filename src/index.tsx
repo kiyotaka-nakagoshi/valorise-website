@@ -396,9 +396,9 @@ app.get('/', (c) => {
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="500">
                     <div class="stat-card rounded-xl p-4">
                         <div class="text-3xl md:text-4xl font-bold mb-1">
-                            <span class="counter" data-target="99.9">0</span><span class="text-2xl">%</span>
+                            <span class="counter" data-target="92">0</span><span class="text-2xl">%</span>
                         </div>
-                        <div class="text-xs md:text-sm opacity-80" id="stat1" data-ja="測定精度" data-en="Accuracy">測定精度</div>
+                        <div class="text-xs md:text-sm opacity-80" id="stat1" data-ja="リピート率" data-en="Repeat Rate">リピート率</div>
                     </div>
                     <div class="stat-card rounded-xl p-4">
                         <div class="text-3xl md:text-4xl font-bold mb-1">
@@ -408,7 +408,7 @@ app.get('/', (c) => {
                     </div>
                     <div class="stat-card rounded-xl p-4">
                         <div class="text-3xl md:text-4xl font-bold mb-1">
-                            <span class="counter" data-target="15">0</span><span class="text-2xl">+</span>
+                            <span class="counter" data-target="24">0</span><span class="text-2xl">+</span>
                         </div>
                         <div class="text-xs md:text-sm opacity-80" id="stat3" data-ja="測定項目" data-en="Parameters">測定項目</div>
                     </div>
