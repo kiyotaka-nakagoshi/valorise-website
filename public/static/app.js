@@ -284,8 +284,32 @@ function initStaffPhotoAutoSwitch() {
     });
 }
 
+// Initialize hero counter animation
+function initHeroCounters() {
+    const counters = document.querySelectorAll('.counter');
+    
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                entry.target.classList.add('counted');
+                const target = parseFloat(entry.target.getAttribute('data-target'));
+                animateCounter(entry.target, target, 2000);
+            }
+        });
+    }, observerOptions);
+    
+    counters.forEach(counter => observer.observe(counter));
+}
+
 // Initialize staff photo auto-switch after page load
 window.addEventListener('load', () => {
     initStaffPhotoAutoSwitch();
+    initHeroCounters();
     console.log('Staff photo auto-switch initialized');
+    console.log('Hero counters initialized');
 });

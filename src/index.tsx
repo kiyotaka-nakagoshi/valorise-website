@@ -245,6 +245,67 @@ app.get('/', (c) => {
         .staff-photo-container img.photo-visible {
             opacity: 1;
         }
+        
+        /* Data Science Hero Background */
+        .hero-data-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .data-point {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            50% { transform: translateY(-30px) translateX(20px); }
+        }
+        
+        .grid-line {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .grid-line.horizontal {
+            width: 100%;
+            height: 1px;
+        }
+        
+        .grid-line.vertical {
+            width: 1px;
+            height: 100%;
+        }
+        
+        .stat-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .pulse-ring {
+            animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        
+        @keyframes pulse-ring {
+            0% { transform: scale(0.9); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
     </style>
 </head>
 <body class="smooth-scroll">
@@ -290,8 +351,31 @@ app.get('/', (c) => {
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center justify-center text-white px-6 pt-20">
-        <div class="container mx-auto text-center">
+    <section class="hero-gradient min-h-screen flex items-center justify-center text-white px-6 pt-20 relative overflow-hidden">
+        <!-- Data Science Background -->
+        <div class="hero-data-bg">
+            <!-- Grid Lines -->
+            <div class="grid-line horizontal" style="top: 20%;"></div>
+            <div class="grid-line horizontal" style="top: 40%;"></div>
+            <div class="grid-line horizontal" style="top: 60%;"></div>
+            <div class="grid-line horizontal" style="top: 80%;"></div>
+            <div class="grid-line vertical" style="left: 20%;"></div>
+            <div class="grid-line vertical" style="left: 40%;"></div>
+            <div class="grid-line vertical" style="left: 60%;"></div>
+            <div class="grid-line vertical" style="left: 80%;"></div>
+            
+            <!-- Floating Data Points -->
+            <div class="data-point" style="top: 15%; left: 10%; animation-delay: 0s;"></div>
+            <div class="data-point" style="top: 25%; left: 85%; animation-delay: 1s;"></div>
+            <div class="data-point" style="top: 45%; left: 15%; animation-delay: 2s;"></div>
+            <div class="data-point" style="top: 65%; left: 90%; animation-delay: 3s;"></div>
+            <div class="data-point" style="top: 75%; left: 25%; animation-delay: 1.5s;"></div>
+            <div class="data-point" style="top: 85%; left: 70%; animation-delay: 2.5s;"></div>
+            <div class="data-point" style="top: 30%; left: 50%; animation-delay: 0.5s;"></div>
+            <div class="data-point" style="top: 55%; left: 60%; animation-delay: 3.5s;"></div>
+        </div>
+        
+        <div class="container mx-auto text-center relative z-10">
             <div class="animate-fadeInUp">
                 <!-- Logo in Hero -->
                 <div class="mb-8" data-aos="fade-down">
@@ -307,7 +391,36 @@ app.get('/', (c) => {
                 <p class="text-lg md:text-xl mb-8 opacity-90" data-aos="fade-up" data-aos-delay="400">
                     <span id="heroDescription" data-ja="トップアスリートも信頼する測定を、あなたに。" data-en="Trusted by top athletes worldwide.">トップアスリートも信頼する測定を、あなたに。</span>
                 </p>
-                <div class="flex flex-col md:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="600">
+                
+                <!-- Data Stats Cards -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="500">
+                    <div class="stat-card rounded-xl p-4">
+                        <div class="text-3xl md:text-4xl font-bold mb-1">
+                            <span class="counter" data-target="99.9">0</span><span class="text-2xl">%</span>
+                        </div>
+                        <div class="text-xs md:text-sm opacity-80" id="stat1" data-ja="測定精度" data-en="Accuracy">測定精度</div>
+                    </div>
+                    <div class="stat-card rounded-xl p-4">
+                        <div class="text-3xl md:text-4xl font-bold mb-1">
+                            <span class="counter" data-target="1000">0</span><span class="text-2xl">+</span>
+                        </div>
+                        <div class="text-xs md:text-sm opacity-80" id="stat2" data-ja="測定実績" data-en="Assessments">測定実績</div>
+                    </div>
+                    <div class="stat-card rounded-xl p-4">
+                        <div class="text-3xl md:text-4xl font-bold mb-1">
+                            <span class="counter" data-target="15">0</span><span class="text-2xl">+</span>
+                        </div>
+                        <div class="text-xs md:text-sm opacity-80" id="stat3" data-ja="測定項目" data-en="Parameters">測定項目</div>
+                    </div>
+                    <div class="stat-card rounded-xl p-4">
+                        <div class="text-3xl md:text-4xl font-bold mb-1">
+                            <span class="counter" data-target="6">0</span><span class="text-2xl">名</span>
+                        </div>
+                        <div class="text-xs md:text-sm opacity-80" id="stat4" data-ja="専門スタッフ" data-en="Specialists">専門スタッフ</div>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center" data-aos="fade-up" data-aos-delay="700">
                     <a href="#contact" class="btn-primary text-white px-8 py-4 rounded-full text-lg font-semibold inline-block">
                         <i class="fas fa-calendar-check mr-2"></i>
                         <span id="heroCTA1" data-ja="無料相談を予約" data-en="Book Free Consultation">無料相談を予約</span>
@@ -317,7 +430,7 @@ app.get('/', (c) => {
                         <span id="heroCTA2" data-ja="詳しく見る" data-en="Learn More">詳しく見る</span>
                     </a>
                 </div>
-                <div class="mt-12 text-sm opacity-80" data-aos="fade-up" data-aos-delay="800">
+                <div class="mt-12 text-sm opacity-80" data-aos="fade-up" data-aos-delay="900">
                     <p id="heroCredentials" data-ja="理学療法士 × トレーナー × データサイエンス" data-en="Physical Therapist × Trainer × Data Science">理学療法士 × トレーナー × データサイエンス</p>
                     <p class="mt-2" id="heroFounder" data-ja="中越清登が提供する唯一無二のフィジカル測定サービス" data-en="Unique physical assessment service by Kiyoto Nakagoshi">中越清登が提供する唯一無二のフィジカル測定サービス</p>
                 </div>
