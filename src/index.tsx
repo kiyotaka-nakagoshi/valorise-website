@@ -260,9 +260,9 @@ app.get('/', (c) => {
     <!-- Navigation -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-300">
         <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="text-2xl font-bold text-white" id="logo">
-                <span class="text-gradient-white">VALORISE</span>
-            </div>
+            <a href="#" class="flex items-center" id="logo">
+                <img src="/static/images/valorise-logo-horizontal.png" alt="VALORISE" class="h-8 md:h-10 w-auto">
+            </a>
             <div class="hidden md:flex space-x-6">
                 <a href="#about" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="VALORISEとは" data-en="About">VALORISEとは</a>
                 <a href="#features" class="text-white hover:text-gray-200 transition-colors nav-link" data-ja="特徴" data-en="Features">特徴</a>
@@ -293,6 +293,10 @@ app.get('/', (c) => {
     <section class="hero-gradient min-h-screen flex items-center justify-center text-white px-6 pt-20">
         <div class="container mx-auto text-center">
             <div class="animate-fadeInUp">
+                <!-- Logo in Hero -->
+                <div class="mb-8" data-aos="fade-down">
+                    <img src="/static/images/valorise-logo-vertical.png" alt="VALORISE" class="h-32 md:h-40 w-auto mx-auto">
+                </div>
                 <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
                     <span id="heroTitle1" data-ja="あなたのフィジカルを" data-en="Transform Your Physical">あなたのフィジカルを</span><br>
                     <span id="heroTitle2" data-ja='"科学"する。' data-en='Performance with Science.'>"科学"する。</span>

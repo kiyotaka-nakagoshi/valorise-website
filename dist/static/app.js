@@ -90,13 +90,10 @@ document.getElementById('langToggle').addEventListener('click', () => {
 // Navbar Scroll Effect
 window.addEventListener('scroll', () => {
     const navbar = document.getElementById('navbar');
-    const logo = document.querySelector('#logo span');
     const navLinks = document.querySelectorAll('.nav-link');
     
     if (window.scrollY > 50) {
         navbar.classList.add('scrolled');
-        logo.classList.remove('text-gradient-white');
-        logo.classList.add('text-gradient');
         navLinks.forEach(link => {
             link.classList.remove('text-white', 'hover:text-gray-200');
             link.classList.add('text-gray-800', 'hover:text-purple-600');
@@ -105,8 +102,6 @@ window.addEventListener('scroll', () => {
         document.getElementById('mobileMenuBtn').classList.add('text-gray-800');
     } else {
         navbar.classList.remove('scrolled');
-        logo.classList.add('text-gradient-white');
-        logo.classList.remove('text-gradient');
         navLinks.forEach(link => {
             link.classList.add('text-white', 'hover:text-gray-200');
             link.classList.remove('text-gray-800', 'hover:text-purple-600');
@@ -206,15 +201,6 @@ if (contactForm) {
         }
     });
 }
-
-// Add gradient white class for initial state
-const style = document.createElement('style');
-style.textContent = `
-    .text-gradient-white {
-        color: white;
-    }
-`;
-document.head.appendChild(style);
 
 // Intersection Observer for fade-in animations
 const observerOptions = {
