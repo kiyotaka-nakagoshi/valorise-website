@@ -794,6 +794,7 @@ app.get('/', (c) => {
                     <span class="text-gradient" id="teamTitle" data-ja="VALORISE フィジカル測定チーム" data-en="VALORISE Measurement Team">VALORISE フィジカル測定チーム</span>
                 </h2>
                 <p class="text-xl text-gray-600" id="teamSubtitle" data-ja="6名体制の専門スタッフが測定をサポート" data-en="6-member professional team supports your assessment">6名体制の専門スタッフが測定をサポート</p>
+                <p class="text-lg text-gray-500 mt-2" id="teamStructure" data-ja="統括 → リーダー → 専門スタッフの階層構造で最高品質を実現" data-en="Hierarchical structure: Director → Leader → Specialists for maximum quality">統括 → リーダー → 専門スタッフの階層構造で最高品質を実現</p>
             </div>
             
             <!-- Team Members -->
@@ -885,8 +886,54 @@ app.get('/', (c) => {
                     </div>
                 </div>
 
-                <!-- 3. Technical Lead -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                <!-- 3. Team Leader (Measurement & Integration Lead) -->
+                <div class="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-start space-x-6">
+                        <!-- Staff Photo with Hover Effect -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
+                            <img src="/static/images/team/urishima-color.jpg" 
+                                 alt="瓜島大洋 - Team Leader" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <img src="/static/images/team/urishima-bw.jpg" 
+                                 alt="瓜島大洋 - Team Leader (B&W)" 
+                                 class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute bottom-0 right-0 bg-gradient-to-br from-teal-600 to-cyan-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                03
+                            </div>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold mb-2">
+                                <span id="team3Role" data-ja="チームリーダー（測定・解析統合責任者）" data-en="Measurement & Integration Lead">チームリーダー（測定・解析統合責任者）</span>
+                                <span class="text-teal-600 ml-2" id="team3Name" data-ja="（瓜島大洋）" data-en="(Taiyo Urishima)">(瓜島大洋)</span>
+                            </h3>
+                            <div class="mb-4">
+                                <span class="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team3Badge1" data-ja="現場統括" data-en="Field Leadership">現場統括</span>
+                                <span class="inline-block bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-semibold" id="team3Badge2" data-ja="統合調整" data-en="Integration">統合調整</span>
+                            </div>
+                            <p class="text-gray-700 mb-4" id="team3Purpose"
+                               data-ja="測定現場・技術・データ・人を統合し、チーム全体のパフォーマンスを最大化する中核的リーダー。"
+                               data-en="Core leader who integrates field operations, technology, data, and people to maximize team performance.">
+                                測定現場・技術・データ・人を統合し、チーム全体のパフォーマンスを最大化する中核的リーダー。
+                            </p>
+                            <details class="cursor-pointer">
+                                <summary class="font-semibold text-teal-600 hover:text-teal-800" id="team3Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
+                                <ul class="mt-3 space-y-2 text-sm text-gray-600 ml-4">
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="測定当日の現場進行管理・タイムスケジュール調整" data-en="On-site progress management">測定当日の現場進行管理・タイムスケジュール調整</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="中越不在時の現場責任者としての判断" data-en="Acting director decisions">中越不在時の現場責任者としての判断</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="フィールドオペレーターへの指示・役割分担" data-en="Staff direction">フィールドオペレーターへの指示・役割分担</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="テクニカル × データの統合・連携調整" data-en="Technical-data integration">テクニカル × データの統合・連携調整</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="クライアントへの一次対応・簡易説明" data-en="Client communication">クライアントへの一次対応・簡易説明</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="測定中の判断（再測定・除外・補足）" data-en="Measurement decisions">測定中の判断（再測定・除外・補足）</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="チーム育成・内部改善提案" data-en="Team development">チーム育成・内部改善提案</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="測定現場の安全管理・トラブル一次対応" data-en="Safety management">測定現場の安全管理・トラブル一次対応</span></li>
+                                </ul>
+                            </details>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Technical Lead -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
                     <div class="flex items-start space-x-6">
                         <!-- Staff Photo with Hover Effect -->
                         <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
@@ -897,38 +944,39 @@ app.get('/', (c) => {
                                  alt="北原寛也 - Technical Lead (B&W)" 
                                  class="absolute inset-0 w-full h-full object-cover">
                             <div class="absolute bottom-0 right-0 bg-gradient-to-br from-blue-600 to-cyan-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
-                                03
+                                04
                             </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
-                                <span id="team3Role" data-ja="テクニカルリード" data-en="Technical Lead">テクニカルリード</span>
-                                <span class="text-blue-600 ml-2" id="team3Name" data-ja="（北原寛也）" data-en="(Hiroya Kitahara)">(北原寛也)</span>
+                                <span id="team4Role" data-ja="テクニカルリード" data-en="Technical Lead">テクニカルリード</span>
+                                <span class="text-blue-600 ml-2" id="team4Name" data-ja="（北原寛也）" data-en="(Hiroya Kitahara)">(北原寛也)</span>
                             </h3>
                             <div class="mb-4">
-                                <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team3Badge1" data-ja="技術責任" data-en="Technical Lead">技術責任</span>
-                                <span class="inline-block bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-semibold" id="team3Badge2" data-ja="現場統括" data-en="Field Management">現場統括</span>
+                                <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team4Badge1" data-ja="技術責任" data-en="Technical Lead">技術責任</span>
+                                <span class="inline-block bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-semibold" id="team4Badge2" data-ja="測定精度" data-en="Measurement Accuracy">測定精度</span>
                             </div>
-                            <p class="text-gray-700 mb-4" id="team3Purpose"
+                            <p class="text-gray-700 mb-4" id="team4Purpose"
                                data-ja="現場での測定技術の最高責任者として、精度・効率・安全性を担保する。"
                                data-en="As the chief technical officer on-site, ensures accuracy, efficiency, and safety.">
                                 現場での測定技術の最高責任者として、精度・効率・安全性を担保する。
                             </p>
                             <details class="cursor-pointer">
-                                <summary class="font-semibold text-blue-600 hover:text-blue-800" id="team3Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
+                                <summary class="font-semibold text-blue-600 hover:text-blue-800" id="team4Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
                                 <ul class="mt-3 space-y-2 text-sm text-gray-600 ml-4">
                                     <li><i class="fas fa-check text-blue-600 mr-2"></i><span data-ja="光電管・VBT・ジャンプ測定の実施" data-en="Measurement execution">光電管・VBT・ジャンプ測定の実施</span></li>
                                     <li><i class="fas fa-check text-blue-600 mr-2"></i><span data-ja="測定導線の設計・配置管理" data-en="Setup design">測定導線の設計・配置管理</span></li>
                                     <li><i class="fas fa-check text-blue-600 mr-2"></i><span data-ja="オペレーターへの技術教育" data-en="Staff training">オペレーターへの技術教育</span></li>
                                     <li><i class="fas fa-check text-blue-600 mr-2"></i><span data-ja="デバイスのセットアップ・点検" data-en="Device management">デバイスのセットアップ・点検</span></li>
+                                    <li><i class="fas fa-check text-blue-600 mr-2"></i><span data-ja="チームリーダーとの測定品質連携" data-en="Quality coordination with leader">チームリーダーとの測定品質連携</span></li>
                                 </ul>
                             </details>
                         </div>
                     </div>
                 </div>
 
-                <!-- 4. Data Manager -->
-                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="300">
+                <!-- 5. Data Manager -->
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
                     <div class="flex items-start space-x-6">
                         <!-- Staff Photo with Hover Effect -->
                         <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
@@ -939,84 +987,68 @@ app.get('/', (c) => {
                                  alt="根本大洋 - Data Manager (B&W)" 
                                  class="absolute inset-0 w-full h-full object-cover">
                             <div class="absolute bottom-0 right-0 bg-gradient-to-br from-green-700 to-emerald-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
-                                04
+                                05
                             </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
-                                <span id="team4Role" data-ja="データマネージャー" data-en="Data Manager">データマネージャー</span>
-                                <span class="text-green-600 ml-2" id="team4Name" data-ja="（根本大洋）" data-en="(Taiyo Nemoto)">(根本大洋)</span>
+                                <span id="team5Role" data-ja="データマネージャー" data-en="Data Manager">データマネージャー</span>
+                                <span class="text-green-600 ml-2" id="team5Name" data-ja="（根本大洋）" data-en="(Taiyo Nemoto)">(根本大洋)</span>
                             </h3>
                             <div class="mb-4">
-                                <span class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team4Badge1" data-ja="解析" data-en="Analysis">解析</span>
-                                <span class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-semibold" id="team4Badge2" data-ja="データ管理" data-en="Data Management">データ管理</span>
+                                <span class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team5Badge1" data-ja="解析" data-en="Analysis">解析</span>
+                                <span class="inline-block bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-semibold" id="team5Badge2" data-ja="データ管理" data-en="Data Management">データ管理</span>
                             </div>
-                            <p class="text-gray-700 mb-4" id="team4Purpose"
+                            <p class="text-gray-700 mb-4" id="team5Purpose"
                                data-ja="測定データの正確な管理・整理・分析を行い、レポート作成までの工程を一元管理する。"
                                data-en="Manages accurate data processing, organization, and analysis, overseeing the entire report creation process.">
                                 測定データの正確な管理・整理・分析を行い、レポート作成までの工程を一元管理する。
                             </p>
                             <details class="cursor-pointer">
-                                <summary class="font-semibold text-green-600 hover:text-green-800" id="team4Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
+                                <summary class="font-semibold text-green-600 hover:text-green-800" id="team5Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
                                 <ul class="mt-3 space-y-2 text-sm text-gray-600 ml-4">
                                     <li><i class="fas fa-check text-green-600 mr-2"></i><span data-ja="Excelへのデータ入力・チェック" data-en="Data entry">Excelへのデータ入力・チェック</span></li>
                                     <li><i class="fas fa-check text-green-600 mr-2"></i><span data-ja="左右差・偏差値・基準値との比較" data-en="Comparative analysis">左右差・偏差値・基準値との比較</span></li>
                                     <li><i class="fas fa-check text-green-600 mr-2"></i><span data-ja="個別フィードバック資料の作成" data-en="Report creation">個別フィードバック資料の作成</span></li>
                                     <li><i class="fas fa-check text-green-600 mr-2"></i><span data-ja="チーム向け総括資料の作成" data-en="Team report">チーム向け総括資料の作成</span></li>
+                                    <li><i class="fas fa-check text-green-600 mr-2"></i><span data-ja="チームリーダーとのデータ連携" data-en="Data coordination with leader">チームリーダーとのデータ連携</span></li>
                                 </ul>
                             </details>
                         </div>
                     </div>
                 </div>
 
-                <!-- 5 & 6. Field Operators -->
-                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+                <!-- 6. Field Operator -->
+                <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="500">
                     <div class="flex items-start space-x-6">
-                        <!-- Staff Photos (2 operators) -->
-                        <div class="flex flex-col space-y-2 flex-shrink-0">
-                            <!-- Taiyo Urishima (05) - With hover effect -->
-                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group staff-photo-container">
-                                <img src="/static/images/team/urishima-color.jpg" 
-                                     alt="瓜島大洋 - Field Operator" 
-                                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                                <img src="/static/images/team/urishima-bw.jpg" 
-                                     alt="瓜島大洋 - Field Operator (B&W)" 
-                                     class="absolute inset-0 w-full h-full object-cover">
-                                <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-700 to-pink-700 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
-                                    05
-                                </div>
-                            </div>
-                            <!-- Hayate Fujimori (06) - With hover effect -->
-                            <div class="relative w-32 h-32 rounded-2xl overflow-hidden group staff-photo-container">
-                                <img src="/static/images/team/fujimori-color.jpg" 
-                                     alt="藤森颯 - Field Operator" 
-                                     class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                                <img src="/static/images/team/fujimori-bw.jpg" 
-                                     alt="藤森颯 - Field Operator (B&W)" 
-                                     class="absolute inset-0 w-full h-full object-cover">
-                                <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-600 to-pink-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
-                                    06
-                                </div>
+                        <!-- Staff Photo -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
+                            <img src="/static/images/team/fujimori-color.jpg" 
+                                 alt="藤森颯 - Field Operator" 
+                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+                            <img src="/static/images/team/fujimori-bw.jpg" 
+                                 alt="藤森颯 - Field Operator (B&W)" 
+                                 class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-600 to-pink-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
+                                06
                             </div>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
-                                <span id="team5Role" data-ja="フィールドオペレーター（2名）" data-en="Field Operators (2)">フィールドオペレーター（2名）</span>
+                                <span id="team6Role" data-ja="フィールドオペレーター" data-en="Field Operator">フィールドオペレーター</span>
+                                <span class="text-red-600 ml-2" id="team6Name" data-ja="（藤森颯）" data-en="(Hayate Fujimori)">(藤森颯)</span>
                             </h3>
-                            <p class="text-gray-600 mb-4">
-                                <span id="team5Name" data-ja="瓜島大洋、藤森颯" data-en="Taiyo Urishima, Hayate Fujimori">瓜島大洋、藤森颯</span>
-                            </p>
                             <div class="mb-4">
-                                <span class="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team5Badge1" data-ja="計測担当" data-en="Measurement">計測担当</span>
-                                <span class="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-semibold" id="team5Badge2" data-ja="現場サポート" data-en="Field Support">現場サポート</span>
+                                <span class="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team6Badge1" data-ja="計測担当" data-en="Measurement">計測担当</span>
+                                <span class="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-sm font-semibold" id="team6Badge2" data-ja="現場サポート" data-en="Field Support">現場サポート</span>
                             </div>
-                            <p class="text-gray-700 mb-4" id="team5Purpose"
+                            <p class="text-gray-700 mb-4" id="team6Purpose"
                                data-ja="現場でのスプリント・ジャンプ・可動域測定を担当し、円滑で安全な測定運営に貢献する。"
                                data-en="Responsible for sprint, jump, and mobility measurements on-site, contributing to smooth and safe operations.">
                                 現場でのスプリント・ジャンプ・可動域測定を担当し、円滑で安全な測定運営に貢献する。
                             </p>
                             <details class="cursor-pointer">
-                                <summary class="font-semibold text-red-600 hover:text-red-800" id="team5Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
+                                <summary class="font-semibold text-red-600 hover:text-red-800" id="team6Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
                                 <ul class="mt-3 space-y-2 text-sm text-gray-600 ml-4">
                                     <li><i class="fas fa-check text-red-600 mr-2"></i><span data-ja="スプリント測定の誘導・サポート" data-en="Sprint support">スプリント測定の誘導・サポート</span></li>
                                     <li><i class="fas fa-check text-red-600 mr-2"></i><span data-ja="ジャンプ測定（CMJ/SCMJ/RB）の実施" data-en="Jump measurement">ジャンプ測定（CMJ/SCMJ/RB）の実施</span></li>
@@ -1024,6 +1056,7 @@ app.get('/', (c) => {
                                     <li><i class="fas fa-check text-red-600 mr-2"></i><span data-ja="測定の順番管理・選手誘導" data-en="Flow management">測定の順番管理・選手誘導</span></li>
                                     <li><i class="fas fa-check text-red-600 mr-2"></i><span data-ja="荷物・備品の搬入搬出" data-en="Equipment setup">荷物・備品の搬入搬出</span></li>
                                     <li><i class="fas fa-check text-red-600 mr-2"></i><span data-ja="測定環境の安全確保" data-en="Safety management">測定環境の安全確保</span></li>
+                                    <li><i class="fas fa-check text-red-600 mr-2"></i><span data-ja="チームリーダーの指示に従った業務遂行" data-en="Following leader's instructions">チームリーダーの指示に従った業務遂行</span></li>
                                 </ul>
                             </details>
                         </div>
@@ -1046,6 +1079,7 @@ app.get('/', (c) => {
                                 <th class="p-3 text-center font-bold" id="tableField" data-ja="現場" data-en="Field">現場</th>
                                 <th class="p-3 text-center font-bold" id="tableData" data-ja="データ" data-en="Data">データ</th>
                                 <th class="p-3 text-center font-bold" id="tableBusiness" data-ja="営業・戦略" data-en="Business">営業・戦略</th>
+                                <th class="p-3 text-center font-bold" id="tableIntegration" data-ja="統合調整" data-en="Integration">統合調整</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -1055,6 +1089,7 @@ app.get('/', (c) => {
                                 <td class="p-3 text-center">△</td>
                                 <td class="p-3 text-center">○</td>
                                 <td class="p-3 text-center">◎</td>
+                                <td class="p-3 text-center">○</td>
                             </tr>
                             <tr class="border-b border-gray-200">
                                 <td class="p-3"><span data-ja="柴村" data-en="Shibamura">柴村</span></td>
@@ -1062,39 +1097,46 @@ app.get('/', (c) => {
                                 <td class="p-3 text-center">○</td>
                                 <td class="p-3 text-center">△</td>
                                 <td class="p-3 text-center">○</td>
+                                <td class="p-3 text-center">△</td>
+                            </tr>
+                            <tr class="border-b border-gray-200 bg-teal-50">
+                                <td class="p-3 font-bold"><span data-ja="瓜島（リーダー）" data-en="Urishima (Leader)">瓜島（リーダー）</span></td>
+                                <td class="p-3"><span data-ja="現場統括・統合" data-en="Field Leadership">現場統括・統合</span></td>
+                                <td class="p-3 text-center">◎</td>
+                                <td class="p-3 text-center">○</td>
+                                <td class="p-3 text-center">○</td>
+                                <td class="p-3 text-center">◎</td>
                             </tr>
                             <tr class="border-b border-gray-200">
-                                <td class="p-3"><span data-ja="テクニカルリード" data-en="Technical Lead">テクニカルリード</span></td>
+                                <td class="p-3"><span data-ja="北原（テクニカル）" data-en="Kitahara (Technical)">北原（テクニカル）</span></td>
                                 <td class="p-3"><span data-ja="技術責任" data-en="Technical">技術責任</span></td>
                                 <td class="p-3 text-center">◎</td>
                                 <td class="p-3 text-center">△</td>
                                 <td class="p-3 text-center">△</td>
+                                <td class="p-3 text-center">△</td>
                             </tr>
                             <tr class="border-b border-gray-200">
-                                <td class="p-3"><span data-ja="データマネージャー" data-en="Data Manager">データマネージャー</span></td>
+                                <td class="p-3"><span data-ja="根本（データ）" data-en="Nemoto (Data)">根本（データ）</span></td>
                                 <td class="p-3"><span data-ja="解析" data-en="Analysis">解析</span></td>
                                 <td class="p-3 text-center">△</td>
                                 <td class="p-3 text-center">◎</td>
                                 <td class="p-3 text-center">△</td>
-                            </tr>
-                            <tr class="border-b border-gray-200">
-                                <td class="p-3"><span data-ja="オペレーター" data-en="Operator">オペレーター</span></td>
-                                <td class="p-3"><span data-ja="計測担当" data-en="Measurement">計測担当</span></td>
-                                <td class="p-3 text-center">◎</td>
                                 <td class="p-3 text-center">△</td>
-                                <td class="p-3 text-center">－</td>
                             </tr>
                             <tr>
-                                <td class="p-3"><span data-ja="オペレーター" data-en="Operator">オペレーター</span></td>
+                                <td class="p-3"><span data-ja="藤森（オペレーター）" data-en="Fujimori (Operator)">藤森（オペレーター）</span></td>
                                 <td class="p-3"><span data-ja="計測担当" data-en="Measurement">計測担当</span></td>
                                 <td class="p-3 text-center">◎</td>
                                 <td class="p-3 text-center">△</td>
                                 <td class="p-3 text-center">－</td>
+                                <td class="p-3 text-center">△</td>
                             </tr>
                         </tbody>
                     </table>
                     <div class="mt-4 text-xs text-gray-500 text-center">
                         <span data-ja="◎ = 主担当 / ○ = 関与大 / △ = 関与小 / － = なし" data-en="◎ = Primary / ○ = High / △ = Low / － = None">◎ = 主担当 / ○ = 関与大 / △ = 関与小 / － = なし</span>
+                        <br>
+                        <span class="text-teal-600 font-semibold mt-2 inline-block" data-ja="※ チームリーダーは測定現場・技術・データを統合する中核的役割" data-en="※ Team Leader integrates field, technical, and data aspects">※ チームリーダーは測定現場・技術・データを統合する中核的役割</span>
                     </div>
                 </div>
             </div>
@@ -1104,21 +1146,22 @@ app.get('/', (c) => {
                 <h3 class="text-2xl font-bold mb-4">
                     <span id="teamStrengthTitle" data-ja="6名体制の強み" data-en="Team Strengths">6名体制の強み</span>
                 </h3>
+                <p class="text-gray-600 mb-6" data-ja="チームリーダーを中心とした階層構造で、現場品質を最大化" data-en="Hierarchical structure with Team Leader for maximum quality">チームリーダーを中心とした階層構造で、現場品質を最大化</p>
                 <div class="grid md:grid-cols-3 gap-6 mt-6">
                     <div>
                         <div class="text-4xl mb-2">🎯</div>
-                        <h4 class="font-bold mb-2" id="strength1Title" data-ja="高精度な測定" data-en="Precision">高精度な測定</h4>
-                        <p class="text-sm text-gray-600" id="strength1Text" data-ja="各分野の専門家による正確な測定実施" data-en="Accurate measurements by specialists">各分野の専門家による正確な測定実施</p>
+                        <h4 class="font-bold mb-2" id="strength1Title" data-ja="統合されたリーダーシップ" data-en="Integrated Leadership">統合されたリーダーシップ</h4>
+                        <p class="text-sm text-gray-600" id="strength1Text" data-ja="チームリーダーが現場・技術・データを統合管理" data-en="Team Leader integrates field, technical, and data">チームリーダーが現場・技術・データを統合管理</p>
                     </div>
                     <div>
                         <div class="text-4xl mb-2">⚡</div>
                         <h4 class="font-bold mb-2" id="strength2Title" data-ja="効率的な運営" data-en="Efficiency">効率的な運営</h4>
-                        <p class="text-sm text-gray-600" id="strength2Text" data-ja="役割分担による円滑な測定進行" data-en="Smooth operations through role division">役割分担による円滑な測定進行</p>
+                        <p class="text-sm text-gray-600" id="strength2Text" data-ja="明確な役割分担と指揮系統で円滑な測定進行" data-en="Smooth operations through clear hierarchy">明確な役割分担と指揮系統で円滑な測定進行</p>
                     </div>
                     <div>
                         <div class="text-4xl mb-2">📊</div>
                         <h4 class="font-bold mb-2" id="strength3Title" data-ja="質の高い分析" data-en="Quality">質の高い分析</h4>
-                        <p class="text-sm text-gray-600" id="strength3Text" data-ja="データから実践への一貫したサポート" data-en="Comprehensive support from data to practice">データから実践への一貫したサポート</p>
+                        <p class="text-sm text-gray-600" id="strength3Text" data-ja="測定から実践まで一貫したサポート体制" data-en="Comprehensive support from measurement to practice">測定から実践まで一貫したサポート体制</p>
                     </div>
                 </div>
             </div>
