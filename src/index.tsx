@@ -907,25 +907,26 @@ app.get('/', (c) => {
                                 <span class="text-teal-600 ml-2" id="team3Name" data-ja="（瓜島大洋）" data-en="(Taiyo Urishima)">(瓜島大洋)</span>
                             </h3>
                             <div class="mb-4">
-                                <span class="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team3Badge1" data-ja="現場統括" data-en="Field Leadership">現場統括</span>
-                                <span class="inline-block bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-semibold" id="team3Badge2" data-ja="統合調整" data-en="Integration">統合調整</span>
+                                <span class="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team3Badge1" data-ja="チーム統合" data-en="Team Integration">チーム統合</span>
+                                <span class="inline-block bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team3Badge2" data-ja="営業参画" data-en="Sales">営業参画</span>
+                                <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold" id="team3Badge3" data-ja="育成・調整" data-en="Development">育成・調整</span>
                             </div>
                             <p class="text-gray-700 mb-4" id="team3Purpose"
-                               data-ja="測定現場・技術・データ・人を統合し、チーム全体のパフォーマンスを最大化する中核的リーダー。"
-                               data-en="Core leader who integrates field operations, technology, data, and people to maximize team performance.">
-                                測定現場・技術・データ・人を統合し、チーム全体のパフォーマンスを最大化する中核的リーダー。
+                               data-ja="技術・データ・人をつなぐ統合役として、チーム全体のパフォーマンスを最大化し、営業活動にも参画する中核的リーダー。"
+                               data-en="Core leader who connects technical, data, and people aspects to maximize team performance and participates in business development.">
+                                技術・データ・人をつなぐ統合役として、チーム全体のパフォーマンスを最大化し、営業活動にも参画する中核的リーダー。
                             </p>
                             <details class="cursor-pointer">
                                 <summary class="font-semibold text-teal-600 hover:text-teal-800" id="team3Details" data-ja="主な業務範囲を見る" data-en="View Responsibilities">主な業務範囲を見る</summary>
                                 <ul class="mt-3 space-y-2 text-sm text-gray-600 ml-4">
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="測定当日の現場進行管理・タイムスケジュール調整" data-en="On-site progress management">測定当日の現場進行管理・タイムスケジュール調整</span></li>
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="中越不在時の現場責任者としての判断" data-en="Acting director decisions">中越不在時の現場責任者としての判断</span></li>
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="フィールドオペレーターへの指示・役割分担" data-en="Staff direction">フィールドオペレーターへの指示・役割分担</span></li>
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="テクニカル × データの統合・連携調整" data-en="Technical-data integration">テクニカル × データの統合・連携調整</span></li>
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="クライアントへの一次対応・簡易説明" data-en="Client communication">クライアントへの一次対応・簡易説明</span></li>
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="測定中の判断（再測定・除外・補足）" data-en="Measurement decisions">測定中の判断（再測定・除外・補足）</span></li>
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="チーム育成・内部改善提案" data-en="Team development">チーム育成・内部改善提案</span></li>
-                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="測定現場の安全管理・トラブル一次対応" data-en="Safety management">測定現場の安全管理・トラブル一次対応</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="テクニカルリード・データマネージャー間の連携調整" data-en="Coordination between technical and data teams">テクニカルリード・データマネージャー間の連携調整</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="測定意図・評価観点のチーム内共有と翻訳" data-en="Translating measurement intent to team">測定意図・評価観点のチーム内共有と翻訳</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="フィールドオペレーターの育成・指導" data-en="Field operator training">フィールドオペレーターの育成・指導</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="チーム内コミュニケーションの潤滑化" data-en="Team communication facilitation">チーム内コミュニケーションの潤滑化</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="クライアントへの一次対応・測定説明" data-en="Client communication">クライアントへの一次対応・測定説明</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="学校・チームへの営業同行・提案サポート" data-en="Sales support and proposals">学校・チームへの営業同行・提案サポート</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="現場で気づいた改善点の提案・実行" data-en="Process improvement">現場で気づいた改善点の提案・実行</span></li>
+                                    <li><i class="fas fa-check text-teal-600 mr-2"></i><span data-ja="中越ディレクターへのフィードバック・報告" data-en="Reporting to director">中越ディレクターへのフィードバック・報告</span></li>
                                 </ul>
                             </details>
                         </div>
@@ -1101,10 +1102,10 @@ app.get('/', (c) => {
                             </tr>
                             <tr class="border-b border-gray-200 bg-teal-50">
                                 <td class="p-3 font-bold"><span data-ja="瓜島（リーダー）" data-en="Urishima (Leader)">瓜島（リーダー）</span></td>
-                                <td class="p-3"><span data-ja="現場統括・統合" data-en="Field Leadership">現場統括・統合</span></td>
+                                <td class="p-3"><span data-ja="チーム統合・営業" data-en="Integration & Sales">チーム統合・営業</span></td>
+                                <td class="p-3 text-center">○</td>
+                                <td class="p-3 text-center">○</td>
                                 <td class="p-3 text-center">◎</td>
-                                <td class="p-3 text-center">○</td>
-                                <td class="p-3 text-center">○</td>
                                 <td class="p-3 text-center">◎</td>
                             </tr>
                             <tr class="border-b border-gray-200">
