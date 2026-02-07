@@ -1022,14 +1022,9 @@ app.get('/', (c) => {
                 <!-- 6. Field Operator -->
                 <div class="bg-gradient-to-br from-red-50 to-pink-50 rounded-2xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="500">
                     <div class="flex items-start space-x-6">
-                        <!-- Staff Photo -->
-                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 group staff-photo-container">
-                            <img src="/static/images/team/fujimori-color.jpg" 
-                                 alt="藤森颯 - Field Operator" 
-                                 class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
-                            <img src="/static/images/team/fujimori-bw.jpg" 
-                                 alt="藤森颯 - Field Operator (B&W)" 
-                                 class="absolute inset-0 w-full h-full object-cover">
+                        <!-- Staff Photo Placeholder -->
+                        <div class="relative w-32 h-32 rounded-2xl overflow-hidden flex-shrink-0 bg-gradient-to-br from-red-100 to-pink-100 flex items-center justify-center">
+                            <i class="fas fa-user text-6xl text-red-300"></i>
                             <div class="absolute bottom-0 right-0 bg-gradient-to-br from-red-600 to-pink-600 text-white w-10 h-10 rounded-tl-2xl flex items-center justify-center text-sm font-bold">
                                 06
                             </div>
@@ -1037,7 +1032,7 @@ app.get('/', (c) => {
                         <div class="flex-1">
                             <h3 class="text-2xl font-bold mb-2">
                                 <span id="team6Role" data-ja="フィールドオペレーター" data-en="Field Operator">フィールドオペレーター</span>
-                                <span class="text-red-600 ml-2" id="team6Name" data-ja="（藤森颯）" data-en="(Hayate Fujimori)">(藤森颯)</span>
+                                <span class="text-red-600 ml-2" id="team6Name" data-ja="（佐藤楓芽）" data-en="(Fuga Sato)">(佐藤楓芽)</span>
                             </h3>
                             <div class="mb-4">
                                 <span class="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold mr-2" id="team6Badge1" data-ja="計測担当" data-en="Measurement">計測担当</span>
@@ -1125,7 +1120,7 @@ app.get('/', (c) => {
                                 <td class="p-3 text-center">△</td>
                             </tr>
                             <tr>
-                                <td class="p-3"><span data-ja="藤森（オペレーター）" data-en="Fujimori (Operator)">藤森（オペレーター）</span></td>
+                                <td class="p-3"><span data-ja="佐藤（オペレーター）" data-en="Sato (Operator)">佐藤（オペレーター）</span></td>
                                 <td class="p-3"><span data-ja="計測担当" data-en="Measurement">計測担当</span></td>
                                 <td class="p-3 text-center">◎</td>
                                 <td class="p-3 text-center">△</td>
